@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "debugger.h"
+#include "Utils.h"
 
 SModule*	g_Module;
 Debugger*	g_Debugger;
@@ -47,7 +48,8 @@ int main()
 		Sleep(1000);
 	} while (!g_Debugger->Attach(pname));
 	
-	g_Module = &g_Debugger->GetModule(pname);
+	SModule module = g_Debugger->GetModule(pname);
+	g_Module = &module;
 
 	std::cout << "-- Trainer --" << std::endl;
 	std::cout << "Process: popcapgame1.exe" << std::endl;
@@ -125,6 +127,7 @@ int main()
 				std::cout << "4 - Future" << std::endl;
 				std::cout << "5 - Mustache" << std::endl;
 				std::cout << "6 - Trickedout" << std::endl;
+				std::cout << "7 - Sukhbir" << std::endl;
 				std::cin >> iv;
 				std::cout << std::endl;
 
@@ -151,60 +154,13 @@ int main()
 					}
 					switch (iv)
 					{
-					case 1:
-						keybd_event(0x44, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // D
-						keybd_event(0x41, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // A
-						keybd_event(0x49, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // I
-						keybd_event(0x53, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // S
-						keybd_event(0x49, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // I
-						keybd_event(0x45, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // E
-						keybd_event(0x53, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // S
-						break;
-					case 2:
-						keybd_event(0x44, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // D
-						keybd_event(0x41, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // A
-						keybd_event(0x4E, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // N
-						keybd_event(0x43, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // C
-						keybd_event(0x45, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // E
-						break;
-					case 3:
-						keybd_event(0x50, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // P
-						keybd_event(0x49, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // I
-						keybd_event(0x4E, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // N
-						keybd_event(0x41, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // A
-						keybd_event(0x54, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // T
-						keybd_event(0x41, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // A
-						break;
-					case 4:
-						keybd_event(0x46, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // F
-						keybd_event(0x55, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // U
-						keybd_event(0x54, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // T
-						keybd_event(0x55, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // U
-						keybd_event(0x52, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // R
-						keybd_event(0x45, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // E
-						break;
-					case 5:
-						keybd_event(0x4D, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // M
-						keybd_event(0x55, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // U
-						keybd_event(0x53, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // S
-						keybd_event(0x54, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // T
-						keybd_event(0x41, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // A
-						keybd_event(0x43, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // C
-						keybd_event(0x48, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // H
-						keybd_event(0x45, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // E
-						break;
-					case 6:
-						keybd_event(0x54, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // T
-						keybd_event(0x52, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // R
-						keybd_event(0x49, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // I
-						keybd_event(0x43, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // C
-						keybd_event(0x4B, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // K
-						keybd_event(0x45, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // E
-						keybd_event(0x44, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // D
-						keybd_event(0x4F, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // O
-						keybd_event(0x55, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // U
-						keybd_event(0x54, 0x45, KEYEVENTF_EXTENDEDKEY | 0, 0); Sleep(2); // T
-						break;
+					case 1: Utils::PressKeys("DAISIES"); break;
+					case 2: Utils::PressKeys("DANCE"); break;
+					case 3: Utils::PressKeys("PINATA"); break;
+					case 4: Utils::PressKeys("FUTURE"); break;
+					case 5: Utils::PressKeys("MUSTACHE"); break;
+					case 6: Utils::PressKeys("TRICKEDOUT"); break;
+					case 7: Utils::PressKeys("SUKHBIR"); break;
 					}
 				}
 				break;
