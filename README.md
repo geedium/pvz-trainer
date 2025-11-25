@@ -36,3 +36,10 @@ Last Verified: **2023-08-22**
 - [x] No Planting Delay
 - [x] Tree of Wisdom Codes
 - [x] Adjustable Tree Height
+
+### Solution Tree
+```
+├───Hook (builds DLL file for PvZInjector)
+├───PvZInjector (injects trainer to process)
+└───PvZTrainer (external terminal CLI)
+```
