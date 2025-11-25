@@ -7,6 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PvZTrainer", "PvZTrainer\Pv
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PvZHook", "Hook\Hook.vcxproj", "{7ECEEBCC-1D01-49B4-850E-0B0051B04E88}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PvZInjector", "PvZInjector\PvZInjector.vcxproj", "{4317F46F-8901-4073-99CF-CCE0C762B23F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7ECEEBCC-1D01-49B4-850E-0B0051B04E88} = {7ECEEBCC-1D01-49B4-850E-0B0051B04E88}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -21,6 +26,10 @@ Global
 		{7ECEEBCC-1D01-49B4-850E-0B0051B04E88}.Debug|x86.Build.0 = Debug|Win32
 		{7ECEEBCC-1D01-49B4-850E-0B0051B04E88}.Release|x86.ActiveCfg = Release|Win32
 		{7ECEEBCC-1D01-49B4-850E-0B0051B04E88}.Release|x86.Build.0 = Release|Win32
+		{4317F46F-8901-4073-99CF-CCE0C762B23F}.Debug|x86.ActiveCfg = Debug|Win32
+		{4317F46F-8901-4073-99CF-CCE0C762B23F}.Debug|x86.Build.0 = Debug|Win32
+		{4317F46F-8901-4073-99CF-CCE0C762B23F}.Release|x86.ActiveCfg = Release|Win32
+		{4317F46F-8901-4073-99CF-CCE0C762B23F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
