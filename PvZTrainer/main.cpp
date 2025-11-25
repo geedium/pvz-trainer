@@ -27,12 +27,12 @@ struct Values
 	DWORD pCoinsBase;
 } data;
 
-inline const void ov_asm_delay()
+inline static const void ov_asm_delay()
 {
 	g_Debugger->Write<DWORD>(g_Module->dwBase + 0x958B6, 0x50497F80);
 }
 
-inline const void ov_asm_awake()
+inline static const void ov_asm_awake()
 {
 	g_Debugger->Write<DWORD>(g_Module->dwBase + 0x958B6, 0x00497F80);
 }
